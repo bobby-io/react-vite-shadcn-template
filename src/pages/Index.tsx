@@ -1,29 +1,31 @@
-import { motion } from "framer-motion";
+import heroImage from "@/assets/hero-image.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 p-6">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center space-y-6"
-      >
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-          Welcome to Your New App
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-md mx-auto">
-          Start building something amazing with this clean, modern React template.
-        </p>
-        <div className="pt-4">
-          <a
-            href="#"
-            className="inline-block px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-md transition-colors duration-200"
-          >
-            Get Started
-          </a>
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-background to-secondary/30 p-6">
+      <div className="text-center space-y-8 max-w-2xl animate-in fade-in duration-700">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src={heroImage} 
+            alt="Welcome illustration" 
+            className="w-full h-auto"
+          />
         </div>
-      </motion.div>
+        <h1 className="text-6xl font-bold text-foreground tracking-tight">
+          Hello World
+        </h1>
+      </div>
+      <footer className="fixed bottom-4 inset-x-0 flex justify-center">
+        <a
+          href="https://x.com/bobby_io"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit @bobby_io on X"
+          className="inline-flex items-center rounded-full border bg-background/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow backdrop-blur hover:bg-background/95 hover:text-foreground"
+        >
+          Made by @bobby_io
+        </a>
+      </footer>
     </div>
   );
 };
